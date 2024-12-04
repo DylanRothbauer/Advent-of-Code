@@ -6,10 +6,17 @@
 using namespace std;
 
 bool isValidNumber(const string& str) {
-    for (char ch : str) {
-        if (!isdigit(ch)) return false;
+    if (str.empty()) {
+        return false;
     }
-    return !str.empty();
+
+    for (int i = 0; i < str.size(); i++) {
+        char ch = str[i];
+        if (!isdigit(ch)) {
+            return false;
+        }
+    }
+    return true;
 }
 
 int main() {
@@ -25,6 +32,7 @@ int main() {
 
     while (getline(inFile, inputLine)) {
         //inputLine = "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))";
+    //inputLine = "why()$mul(5,5)don't()mul(5,5)do()mul(2,2)^?!what()";
         int pos = 0;
 
         while (pos < inputLine.length()) {
