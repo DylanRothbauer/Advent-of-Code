@@ -7,45 +7,59 @@ Welcome to my **Advent of Code** repository! This is where I share my solutions,
 
 ## 🛠️ Repository Structure
 This repository is organized by year and then by day:  
-Advent-of-Code/  
-│  
-├── 2024/  
-│   ├── Day1/  
-│   │   ├── main.cpp  
-│   │   └── README.md  
-│   ├── Day2/  
-│   │   ├── main.py  
-│   │   └── README.md  
-│   └── ...  
-│  
-├── 2023/    
-│   ├── Day1/  
-│   │   ├── main.java  
-│   │   └── README.md  
-│   ├── Day2/  
-│   │   ├── main.js  
-│   │   └── README.md  
-│   └── ...  
-│  
+```plaintext
+Advent-of-Code/
+│
+├── 2024/
+│   ├── Day1/
+│   │   ├── README.md           # Problem description and explanation
+│   │   ├── problem.txt         # Raw problem statement
+│   │   ├── input.txt           # My input data
+│   │   └── solution.cpp        # My solution in C++
+│   ├── Day2/
+│   │   ├── README.md
+│   │   ├── problem.txt
+│   │   ├── input.txt
+│   │   └── solution.py
+│   └── ...
+│
+├── 2023/
+│   ├── Day1/
+│   │   ├── README.md
+│   │   ├── problem.txt
+│   │   ├── input.txt
+│   │   └── solution.js
+│   ├── Day2/
+│   │   ├── README.md
+│   │   ├── problem.txt
+│   │   ├── input.txt
+│   │   └── solution.java
+│   └── ...
+│
 ... (and so on for each year)
+```
 
 
 ## 🚀 My Progress
 | Year | Day | Part 1 Completed | Part 2 Completed |
 |------|-----|-------------------|-------------------|
 | 2024 | 1   | ✅                 | ✅                 |
-| 2024 | 2   | 🕒                 | 🕒                 |
-| ...  |     |                   |                   |
+| 2024 | 2   | ✅                 | ✅                 |
+| ...  | 3   | ✅                 |  ✅                |
+| ...  | 4   | 🕒                 |  🕒                |
+| ...  | 5   | 🕒                 |  🕒                |
 
 ## ⭐ How to Use This Repo
 - Clone or download the repository.
-- Navigate to the year's folder to view my solutions for each day.
+- Navigate to the specific year and day folders to view my solutions and inputs.
 - Each day's folder contains:
-  - The main file where my code is for the solution.
-  - A README.md file explaining the problem and my approach.
+  - README.md: The problem statement and my explanation.
+  - problem.txt: The raw text of the problem description.
+  - input.txt: The input data I used to solve the problem.
+  - solution.xxx: My solution file in the corresponding programming language (e.g., C++, Python, JavaScript).
 
 ## 📊 Problem Statements
-The problem statements are included in each day's folder, but you can also view them on the official [Advent of Code website](https://adventofcode.com/).
+Problem statements are available in the problem.txt file within each day's folder. You can also view them on the official [Advent of Code website](https://adventofcode.com/).
 
 ## 🧑‍💻 Why I'm Doing This
 Participating in Advent of Code is a fantastic way to:
