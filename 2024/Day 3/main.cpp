@@ -79,6 +79,7 @@ int main() {
                     string mulExpr = inputLine.substr(start, end - start - 1);
                     sum += processMul(mulExpr);  // Process the extracted content
                 }
+                // pos = end | This worked before, but changed to pos++ to not abandon nested mul('s
                 pos++;  // Move past the current "mul()"
             }
             else {
