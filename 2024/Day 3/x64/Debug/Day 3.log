@@ -1,2 +1,3 @@
 ﻿  main.cpp
+C:\Users\RothbauerDylan\GitHub\Advent-of-Code\2024\Day 3\main.cpp(29,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Day 3.vcxproj -> C:\Users\RothbauerDylan\GitHub\Advent-of-Code\2024\Day 3\x64\Debug\Day 3.exe
