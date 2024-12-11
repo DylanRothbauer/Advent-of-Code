@@ -109,8 +109,8 @@ int main() {
 
         bool isValid = true;
 
-        for (size_t j = 0; j < pages.size(); j++) {
-            for (size_t k = j + 1; k < pages.size(); k++) {
+        for (int j = 0; j < pages.size(); j++) {
+            for (int k = j + 1; k < pages.size(); k++) {
                 int page1 = pages[j];
                 int page2 = pages[k];
 
