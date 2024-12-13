@@ -47,7 +47,8 @@ Advent-of-Code/
 | 2024 | 2   |  ✅                 |  ✅                 |
 | 2024 | 3   |  ✅                 |  ✅                 |
 | 2024 | 4   |  ✅                 |  ✅                 |
-| 2024 | 5   |  🕒                 |  🕒                 |
+| 2024 | 5   |  ✅                 |  ✅                 |
+| 2024 | 6   |  🕒                 |  🕒                 |
 
 ## ⭐ How to Use This Repo
 - Clone or download the repository.
