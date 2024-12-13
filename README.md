@@ -39,17 +39,6 @@ Advent-of-Code/
 ... (and so on for each year)
 ```
 
-
-## 🚀 My Progress
-| Year | Day | Part 1 Completed | Part 2 Completed |
-|------|-----|-------------------|-------------------|
-| 2024 | 1   |  ✅                 |  ✅                 |
-| 2024 | 2   |  ✅                 |  ✅                 |
-| 2024 | 3   |  ✅                 |  ✅                 |
-| 2024 | 4   |  ✅                 |  ✅                 |
-| 2024 | 5   |  ✅                 |  ✅                 |
-| 2024 | 6   |  🕒                 |  🕒                 |
-
 ## ⭐ How to Use This Repo
 - Clone or download the repository.
 - Navigate to the specific year and day folders to view my solutions and inputs.
