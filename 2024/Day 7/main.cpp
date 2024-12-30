@@ -7,7 +7,7 @@
 
 using namespace std;
 
-// Helper function to recursively generate all combinations of '+' and '*'
+// Helper function to recursively generate all combinations of '+', '*', and '||'
 void generateCombinations(vector<char>& current, int n, vector<vector<char>>& allCombinations) {
     if (current.size() == n) {
         allCombinations.push_back(current);
@@ -23,17 +23,30 @@ void generateCombinations(vector<char>& current, int n, vector<vector<char>>& al
     current.push_back('*');
     generateCombinations(current, n, allCombinations);
     current.pop_back();
+
+    // Add '||' and recurse
+    current.push_back('|');
+    generateCombinations(current, n, allCombinations);
+    current.pop_back();
+}
+
+// Simplified concatenation function
+long long concatenate(long long a, long long b) {
+    return stoll(to_string(a) + to_string(b));
 }
 
 // Function to evaluate the result of applying the operators
 long long evaluateExpression(const vector<long long>& numbers, const vector<char>& operators) {
     long long result = numbers[0];
-    for (int i = 0; i < operators.size(); ++i) {
+    for (size_t i = 0; i < operators.size(); ++i) {
         if (operators[i] == '+') {
             result += numbers[i + 1];
         }
         else if (operators[i] == '*') {
             result *= numbers[i + 1];
+        }
+        else if (operators[i] == '|') { // Concatenation operator
+            result = concatenate(result, numbers[i + 1]);
         }
     }
     return result;
@@ -61,12 +74,12 @@ int main() {
                     targetValue = stoll(target); // Convert the left-hand side to a long long
                 }
                 catch (const invalid_argument& e) {
-                    cout << "Error: Invalid target value in input: " << target << endl;
-                    continue;
+                    cerr << "Error: Invalid target value in input: " << target << endl;
+                    continue; // Skip this line
                 }
                 catch (const out_of_range& e) {
-                    cout << "Error: Target value out of range: " << target << endl;
-                    continue;
+                    cerr << "Error: Target value out of range: " << target << endl;
+                    continue; // Skip this line
                 }
 
                 // Extract numbers from the right-hand side
@@ -79,7 +92,7 @@ int main() {
                 }
 
                 if (numbers.empty()) {
-                    cout << "Error: No numbers found on the right-hand side for input: " << inputLine << endl;
+                    cerr << "Error: No numbers found on the right-hand side for input: " << inputLine << endl;
                     continue; // Skip this line
                 }
 
@@ -92,10 +105,16 @@ int main() {
                 // Check all combinations
                 bool isPossible = false;
                 for (const auto& operators : allCombinations) {
-                    long long result = evaluateExpression(numbers, operators);
-                    if (result == targetValue) {
-                        isPossible = true;
-                        break;
+                    try {
+                        long long result = evaluateExpression(numbers, operators);
+                        if (result == targetValue) {
+                            isPossible = true;
+                            break;
+                        }
+                    }
+                    catch (const exception& e) {
+                        cerr << "Error evaluating expression: " << e.what() << endl;
+                        continue; // Ignore invalid expressions
                     }
                 }
 
@@ -105,11 +124,11 @@ int main() {
                 }
             }
             else {
-                cout << "Error: Invalid input format in line: " << inputLine << endl;
+                cerr << "Error: Invalid input format in line: " << inputLine << endl;
             }
         }
         catch (const exception& e) {
-            cout << "Unexpected error while processing line: " << inputLine << "\n"
+            cerr << "Unexpected error while processing line: " << inputLine << "\n"
                 << "Error: " << e.what() << endl;
         }
     }
